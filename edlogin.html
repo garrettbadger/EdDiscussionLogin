@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ed Discussion - Login</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background-color: #1a2332;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: #ffffff;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 360px;
+      padding: 20px;
+      text-align: center;
+    }
+
+    /* Logo */
+    .logo {
+      width: 72px;
+      height: 72px;
+      background: linear-gradient(135deg, #7b5cff 0%, #c44dff 100%);
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 32px;
+      font-size: 28px;
+      font-weight: 700;
+      color: white;
+      letter-spacing: -0.5px;
+    }
+
+    /* Region selector */
+    .region-select {
+      display: inline-block;
+      background: transparent;
+      border: 1px solid #3a4a5c;
+      border-radius: 6px;
+      color: #c0c8d4;
+      padding: 6px 12px;
+      font-size: 14px;
+      margin-bottom: 28px;
+      cursor: pointer;
+      appearance: none;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23c0c8d4' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 10px center;
+      padding-right: 28px;
+    }
+
+    .region-select:focus {
+      outline: none;
+      border-color: #5b8def;
+    }
+
+    /* Form */
+    form {
+      text-align: left;
+    }
+
+    label {
+      display: block;
+      font-size: 14px;
+      color: #e0e6ed;
+      margin-bottom: 8px;
+      font-weight: 500;
+    }
+
+    input[type="email"],
+    input[type="password"] {
+      width: 100%;
+      padding: 12px 14px;
+      background: #ffffff;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      color: #1a2332;
+      margin-bottom: 20px;
+    }
+
+    input[type="email"]:focus,
+    input[type="password"]:focus {
+      outline: 2px solid #5b8def;
+      outline-offset: 1px;
+    }
+
+    .continue-btn {
+      width: 100%;
+      padding: 14px;
+      background: #2f6fed;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.15s ease;
+    }
+
+    .continue-btn:hover {
+      background: #2563eb;
+    }
+
+    /* Footer links */
+    .links {
+      margin-top: 24px;
+      text-align: center;
+    }
+
+    .links a {
+      display: block;
+      color: #8b9bb0;
+      text-decoration: none;
+      font-size: 14px;
+      margin: 10px 0;
+    }
+
+    .links a:hover {
+      color: #c0c8d4;
+      text-decoration: underline;
+    }
+
+    /* Bottom legal links */
+    .legal {
+      position: absolute;
+      bottom: 24px;
+      right: 24px;
+      font-size: 13px;
+    }
+
+    .legal a {
+      color: #8b9bb0;
+      text-decoration: none;
+      margin-left: 12px;
+    }
+
+    .legal a:hover {
+      color: #c0c8d4;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Logo -->
+    <div class="logo">ed</div>
+
+    <!-- Region -->
+    <select class="region-select">
+      <option value="us" selected>US</option>
+      <option value="eu">EU</option>
+      <option value="au">AU</option>
+    </select>
+
+    <!-- Form -->
+    <form>
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" autocomplete="username" required>
+
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" autocomplete="current-password" required>
+
+      <button type="submit" class="continue-btn">Continue</button>
+    </form>
+
+    <div class="links">
+      <a href="#">Login with an email code</a>
+      <a href="#">Forgot password?</a>
+    </div>
+  </div>
+
+  <div class="legal">
+    <a href="#">Privacy</a>
+    <a href="#">Terms</a>
+  </div>
+</body>
+</html>
